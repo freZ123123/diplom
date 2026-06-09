@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-white;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-black font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-elevated hover:bg-surface-hover text-white font-medium px-6 py-2.5 rounded-lg border border-border transition-colors duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-2.5 rounded-lg transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-surface-card rounded-xl border border-border overflow-hidden transition-transform duration-200 hover:scale-[1.02];
+  }
+
+  .input-field {
+    @apply w-full bg-surface-elevated border border-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-primary focus:outline-none transition-colors;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-green {
+    @apply badge bg-primary/20 text-primary;
+  }
+
+  .badge-yellow {
+    @apply badge bg-yellow-500/20 text-yellow-400;
+  }
+
+  .badge-red {
+    @apply badge bg-red-500/20 text-red-400;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold mb-6 flex items-center gap-3;
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-surface-elevated rounded;
+  }
+}
